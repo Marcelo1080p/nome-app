@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+
 
 function App() {
+  const[nameInput, setNameInput] = useState(null)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>Infome o seu nome: </label>
+      <input onChange={e => setNameInput(e.target.value)}/>
+      <br/>
+      <br/>
+      <button >Reverter Nome</button>
+      <br/>
+      <br/>
+      <p>Seu nome: {nameInput}</p>
+      <p>Seu nome De trás para frente: </p> <p>{""}</p>
     </div>
   );
 }
