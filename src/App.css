@@ -5,6 +5,87 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #7375a5, #2b364a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid #FFF;
+    background-color: rgba(0, 0, 0, 0.349);
+    backdrop-filter: blur(100px);
+    height: 400px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container section {
+    border: 1px solid #ddd;
+    height: 300px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.container-button button {
+    position: relative;
+    background-color: transparent;
+    border: 4px solid black;
+    height: 50px;
+    width: 200px;
+    font: normal 400 1.1rem "Poppins";
+    cursor: pointer;
+}
+
+.container-button button::after, button::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    background-color: #FFF;
+    transform: skewX(150deg);
+}
+
+.container-button button::after {
+    top: -4px;
+}
+
+.container-button button::before {
+    bottom: -4px;
+}
+
+
+.container .entrada-dados {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #FFF;
+}
+
+.container .entrada-dados label {
+    font: normal 500 1rem "Poppins";
+}
+.container .entrada-dados input {
+    width: 220px;
+    outline: none;
+}
+
+
+.container .resposta-dados {
+    border: 1px solid #FFF;
+}
+
 p .nomeReal {
     text-transform: capitalize;
 }
